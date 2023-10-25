@@ -1,20 +1,15 @@
 # Lab 6: Version Control
 # Arossa Adhikary & Lam Nguyen
 
-
 def encode(password):
   pass
-
 
 def decode(password):
    pass
 
-
 if __name__ == '__main__':
 
-
    password_encode = ""
-
 
    # printing menu
    while True:
@@ -28,7 +23,6 @@ if __name__ == '__main__':
        print()
        menu_input = int(input("Please enter an option: "))
 
-
        if menu_input == 1:
            password_to_encode = print("Please enter your password to encode: ")
            password_encoded = encode(password_to_encode)
@@ -39,10 +33,4 @@ if __name__ == '__main__':
            break
        else:
            print("Please choose menu option 1-3.")
-
-
-
-
-
-
-
+           print('test')
