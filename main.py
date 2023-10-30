@@ -2,7 +2,25 @@
 # Arossa Adhikary & Lam Nguyen
 
 def encode(password):
-  pass
+    # take in 8-digit password in string format containing only integers
+    # encoder stores encoded password to new variable with each digit shifted up by three numbers
+
+    # storing newly encoded password
+    encoded_password = ""
+
+    for item in password:
+        # changing each string value to an integer
+        item = int(item)
+        # adding three to each item
+        item += 3
+        # selecting the ones place of each digit
+        item = item % 10
+        # changing value back to str for  final string formatting
+        item = str(item)
+        # appending each str value to final str
+        encoded_password += item
+
+    return encoded_password
 
 def decode(password):
    pass
@@ -11,14 +29,13 @@ if __name__ == '__main__':
 
    password_encode = ""
 
-   # printing menu
+   # printing menu until user choses to exit the program (option 3)
    while True:
        print("Menu")
        print("-------------")
        print("1. Encode")
        print("2. Encode")
        print("3. Quit")
-
 
        print()
        menu_input = int(input("Please enter an option: "))
@@ -32,5 +49,4 @@ if __name__ == '__main__':
        elif menu_input == 3:
            break
        else:
-           print("Please choose menu option 1-3.")
-           print('test')
+           print("Please choose a menu option 1-3.\n")
