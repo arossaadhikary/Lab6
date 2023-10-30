@@ -41,11 +41,11 @@ if __name__ == '__main__':
        menu_input = int(input("Please enter an option: "))
 
        if menu_input == 1:
-           password_to_encode = print("Please enter your password to encode: ")
-           password_encoded = encode(password_to_encode)
+           password = print("Please enter your password to encode: ")
+
            print("Your password has been encoded and stored!")
        elif menu_input == 2:
-           print(f"The encoded password is {password_encoded}, and the original password is {password_to_encode}")
+           print(f"The encoded password is {encode(password)}, and the original password is {decode(password)}")
        elif menu_input == 3:
            break
        else:
