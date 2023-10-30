@@ -23,11 +23,23 @@ def encode(password):
     return encoded_password
 
 def decode(password):
-   pass
+    original_password = ''
+    # For each element in the password, it will reverse the +3 from the encode method, thereby decoding it.
+    for item in password:
+        item = int(item) - 3
+        # If the number is negative after the subtraction, it will add 10 to the element.
+        if item < 0:
+            item += 10
+        # Adds on the decoded element to the original password string.
+        original_password += str(item)
+
+    return original_password
+
 
 if __name__ == '__main__':
 
    password_encode = ""
+   password = ''
 
    # printing menu until user choses to exit the program (option 3)
    while True:
@@ -41,7 +53,7 @@ if __name__ == '__main__':
        menu_input = int(input("Please enter an option: "))
 
        if menu_input == 1:
-           password = print("Please enter your password to encode: ")
+           password = input("Please enter your password to encode: ")
 
            print("Your password has been encoded and stored!")
        elif menu_input == 2:
